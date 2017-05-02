@@ -1,18 +1,15 @@
 package mediator;
 
-import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.BoxLayout;
-import java.awt.TextField;
-import java.awt.Button;
-import java.awt.Panel;
-import java.awt.GridLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class CaculatorFrame extends JFrame {
 
@@ -38,66 +35,69 @@ public class CaculatorFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public CaculatorFrame() {
+		CaculatorMediator caculatorMediator =  new CaculatorMediator();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 441, 383);
 		getContentPane().setLayout(null);
-		
-		TextField textField = new TextField();
-		textField.setBounds(23, 10, 389, 36);
-		getContentPane().add(textField);
-		
+		Label labelField = new Label();
+		labelField.setBounds(23, 10, 389, 36);
+		labelField.setBackground(Color.WHITE);
+		labelField.setAlignment(Label.RIGHT);
+		labelField.setFont(new Font(null, Font.BOLD, 20));
+		caculatorMediator.setLabelField(labelField);
+		getContentPane().add(labelField);
 		Panel panel = new Panel();
 		panel.setBounds(23, 52, 389, 273);
 		getContentPane().add(panel);
 		panel.setLayout(new GridLayout(0, 4, 10, 10));
 		
-		Button button1 = new Button("1");
+		Button button1 = new NumericButton("1", caculatorMediator);
 		panel.add(button1);
 		
-		Button button2 = new Button("2");
+		Button button2 = new NumericButton("2", caculatorMediator);
 		panel.add(button2);
 		
-		Button button3 = new Button("3");
+		Button button3 = new NumericButton("3", caculatorMediator);
 		panel.add(button3);
 		
-		Button button_Div = new Button("/");
+		Button button_Div = new OperationButton("/", caculatorMediator);
 		panel.add(button_Div);
 		
-		Button button4 = new Button("4");
+		Button button4 = new NumericButton("4", caculatorMediator);
 		panel.add(button4);
 		
-		Button button5 = new Button("5");
+		Button button5 = new NumericButton("5", caculatorMediator);
 		panel.add(button5);
 		
-		Button button6 = new Button("6");
+		Button button6 = new NumericButton("6", caculatorMediator);
 		panel.add(button6);
 		
-		Button button_Multi = new Button("*");
+		Button button_Multi = new OperationButton("*", caculatorMediator);
 		panel.add(button_Multi);
 		
-		Button button_9 = new Button("7");
-		panel.add(button_9);
+		Button button7 = new NumericButton("7", caculatorMediator);
+		panel.add(button7);
 		
-		Button button_10 = new Button("8");
-		panel.add(button_10);
+		Button button8 = new NumericButton("8", caculatorMediator);
+		panel.add(button8);
 		
-		Button button_11 = new Button("9");
-		panel.add(button_11);
+		Button button9 = new NumericButton("9", caculatorMediator);
+		panel.add(button9);
 		
-		Button button_12 = new Button("-");
-		panel.add(button_12);
+		Button buttonMinus = new OperationButton("-", caculatorMediator);
+		panel.add(buttonMinus);
 		
-		Button button_13 = new Button("0");
-		panel.add(button_13);
+		Button button0 = new NumericButton("0", caculatorMediator);
+		panel.add(button0);
 		
-		Button button_14 = new Button(".");
-		panel.add(button_14);
+		Button buttonDot = new NumericButton(".", caculatorMediator);
+		panel.add(buttonDot);
 		
-		Button button_15 = new Button("=");
-		panel.add(button_15);
+		Button buttonEqual = new OperationButton("=", caculatorMediator);
+		panel.add(buttonEqual);
 		
-		Button button_16 = new Button("+");
-		panel.add(button_16);
+		Button buttonPlus = new OperationButton("+", caculatorMediator);
+		panel.add(buttonPlus);
 		
 	
 	}
