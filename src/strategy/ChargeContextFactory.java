@@ -10,16 +10,23 @@ public class ChargeContextFactory {
 	private ICharge charge;
 
 	public ChargeContextFactory(String type) {
-		switch(type){
-		case "正常收费":
+//		switch(type){
+//		case "正常收费":
+//			this.charge=new NormalCharge();
+//			break;
+//		case "每满300减100":
+//			this.charge=new ChargeRetun(300,100);
+//			break;
+//		case "打8折":
+//			this.charge = new ChargeRebate(0.8);
+//			break;
+//		}
+		if("正常收费".equals(type)){
 			this.charge=new NormalCharge();
-			break;
-		case "每满300减100":
+		}else if("每满300减100".equals(type)){
 			this.charge=new ChargeRetun(300,100);
-			break;
-		case "打8折":
+		}else if("打8折".equals(type)){
 			this.charge = new ChargeRebate(0.8);
-			break;
 		}
 	}
 	

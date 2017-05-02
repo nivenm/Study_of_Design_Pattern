@@ -23,7 +23,7 @@ public class ExampleClient  implements KeyListener,ItemListener {
 	private JFrame frame;
 	private JTextField txt_unitPrice;
 	private JTextField txt_quantum;
-	private JComboBox<?> comboBox;
+	private JComboBox comboBox;
 	JLabel lbl_normalAmount , lbl_realAmount;
 
 	/**
