@@ -3,7 +3,14 @@ package mediator;
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ * 0~9以及小数点按钮 类
+ * 通过构造函数来引入中介器
+ * 并在事件中调用中介器
+ * 相当于改模式中的Colleague
+ * @author wangth89
+ *
+ */
 public class NumericButton extends Button implements ActionListener {
 	private Mediator mediator;
 	private String value;

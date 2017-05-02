@@ -10,7 +10,11 @@ import java.awt.Panel;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+/**
+ * 客户端类创建并布局所有控件 并创建相应的中介器
+ * @author wangth89
+ *
+ */
 public class CaculatorFrame extends JFrame {
 
 	private JPanel contentPane;
