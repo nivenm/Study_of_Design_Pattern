@@ -21,6 +21,7 @@ public class ChargeContextFactory {
 			this.charge = new ChargeRebate(0.8);
 			break;
 		}
+	
 	}
 	
 	public double getFianalFee(double money){
