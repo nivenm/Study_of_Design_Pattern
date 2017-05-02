@@ -1,8 +1,8 @@
 package mediator;
 
-import javax.swing.JButton;
+import java.awt.Button;
 
-public class NumericButton extends JButton {
+public class NumericButton extends Button {
 	private int value;
 	private String caption; 
 	public String getCaption() {
@@ -20,7 +20,7 @@ public class NumericButton extends JButton {
 	}
 	
 	private void init(){
-		setText(caption);
+		setLabel(caption);
 		
 	}
 }
