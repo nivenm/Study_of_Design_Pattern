@@ -1,5 +1,9 @@
 package interpreter;
-
+/**
+ * ÒôËÙ½âÊÍÆ÷
+ * @author WangTianHai
+ *
+ */
 public class Speed extends Expression {
 
 	@Override

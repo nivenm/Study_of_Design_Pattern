@@ -1,5 +1,9 @@
 package interpreter;
-
+/**
+ * ÒôÓò½âÊÍÆ÷
+ * @author WangTianHai
+ *
+ */
 public class Scale extends Expression {
 
 	@Override

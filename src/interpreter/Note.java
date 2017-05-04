@@ -1,5 +1,9 @@
 package interpreter;
-
+/**
+ * Òô·û½âÊÍÆ÷
+ * @author WangTianHai
+ *
+ */
 public class Note extends Expression {
 
 	@Override
